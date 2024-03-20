@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form method="POST">
+            <input id="description" name="description" required type="text" placeholder="Enter todo" value="{{ todo['description'] }}">
+            <select id="priority" name="priority" required>
+                <option value="important" {{ 'selected' if todo['priority'] == 'important' }}>Important</option>
+                <option value="unimportant" {{ 'selected' if todo['priority'] == 'unimportant' }}>Unimportant</option>
+            </select>
+            <button type="submit">Update</button>
+        </form>
+    </div>
+</body>
+</html>
